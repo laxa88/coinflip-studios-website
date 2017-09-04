@@ -3,11 +3,11 @@ module.exports = {
   "plugins": [
     "react"
   ],
-  parser: "babel-eslint",
+  // parser: "babel-eslint",
   "rules": {
     // "semi": ["error", "always"],
     // "quotes": ["error", "double"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }] // allows js files to use jsx syntax
   },
   "env": {
     "browser": true,
