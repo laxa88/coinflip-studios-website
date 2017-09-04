@@ -23,5 +23,8 @@ module.exports = {
   plugins: [
     HtmlWebpackPluginConfig,
     new UglifyJSPlugin()
-  ]
+  ],
+  resolve: {
+    extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".json"]
+  }
 }
