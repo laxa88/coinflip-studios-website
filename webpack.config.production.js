@@ -1,4 +1,5 @@
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -17,12 +18,12 @@ module.exports = {
     loaders: [
       { test: /\.js$/, loader: ['babel-loader', 'eslint-loader'], exclude: /node_modules/ },
       { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.(jpe?g|png|gif|svg)$/i, loader: ['file-loader'], exclude: /node_modules/ },
       { test: /\.css$/, loader: ['style-loader', 'css-loader'], exclude: /node_modules/ }
     ]
   },
   plugins: [
-    HtmlWebpackPluginConfig
+    HtmlWebpackPluginConfig,
+    new UglifyJSPlugin()
   ],
   resolve: {
     extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".json"]
