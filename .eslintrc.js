@@ -10,6 +10,7 @@ module.exports = {
     // "semi": ["error", "always"],
     // "quotes": ["error", "double"],
     // "max-len": [1, 80],
+    "linebreak-style": ["error", "windows"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }] // allows js files to use jsx syntax
   },
   "env": {
